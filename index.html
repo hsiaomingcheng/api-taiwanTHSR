@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>台灣高鐵</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="page-body">
+        <h2 class="body-title">台灣高鐵</h2>
+
+        <div class="nav-wrap">
+            <div id="nav-station" class="nav-item active" data-index="0">車站資訊</div>
+            <div id="nav-price" class="nav-item" data-index="1">票價表</div>
+            <div id="nav-time" class="nav-item" data-index="2">時刻表</div>
+        </div>
+
+        <div id="station-board" class="content-wrap active">
+            <h3 class="station-title">車站資訊</h3>
+            <div id="station-nav" class="clearfix"></div>
+            <div class="station-content clearfix">
+                <div class="station-content-wrap">
+                    <p id="station-cname" class="station-cname"></p>
+                    <p id="station-ename" class="station-ename"></p>
+                    <p id="station-address" class="station-address"></p>
+                </div>
+                <img id="station-image" class="station-image" src="" alt="">
+            </div>
+        </div>
+
+        <div id="price-board" class="content-wrap">
+            <div class="type-wrap">
+                <p class="type-button active" data-type="4">所有票價</p>
+                <p class="type-button" data-type="5">起訖站票價</p>
+                <p class="type-button" data-type="0">商務票價</p>
+                <p class="type-button" data-type="1">標準票價</p>
+                <p class="type-button" data-type="2">自由票價</p>
+            </div>
+            <div id="all-table" class="price-wrap active">
+                <div class="all-table-content">
+                    <h3 class="price-title">商務票價</h3>
+                </div>
+                <div class="all-table-content">
+                    <h3 class="price-title">標準票價</h3>
+                </div>
+                <div class="all-table-content">
+                    <h3 class="price-title">自由票價</h3>
+                </div>
+            </div>
+            <div id="level-table" class="price-wrap"></div>
+            <div id="select-table" class="price-wrap">
+                <div class="spot-wrap">
+                    <div class="spot-content">
+                        <p>起點站</p>
+                        <select id="select-start"></select>
+                    </div>
+                    <div class="spot-content">
+                        <p>終點站</p>
+                        <select id="select-end"></select>
+                    </div>
+                </div>
+                <div id="select-journey" class="select-journey"></div>
+                <div id="select-price"></div>
+            </div>
+        </div>
+
+        <div id="time-board" class="content-wrap">
+            <h3 class="time-title">時刻表與票價查詢</h3>
+            <div class="query-wrap">
+                <p class="query-title">請選擇查詢條件</p>
+                <div class="query-rule-wrap">
+                    <input type="date" id="query-date" class="query-date" name="query-date">
+                    <select id="query-start" class="query-rule"></select>
+                    <select id="query-end" class="query-rule"></select>
+                    <select id="query-trip" class="query-rule"></select>
+                </div>
+                <div id="query-button" class="query-button">立即查詢</div>
+            </div>
+            <div id="time-table-wrap">
+                <h3 id="time-table-title" class="time-table-title"></h3>
+                <div class="time-table">
+                    <div id="time-table-head" class="time-table-head"></div>
+                    <div id="time-table-body" class="time-table-body"></div>
+                </div>
+                <h3 class="time-table-title">車廂票價參考</h3>
+                <div id="time-price-wrap" class="time-price-wrap"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
